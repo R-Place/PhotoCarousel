@@ -8,10 +8,20 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "test": "jest",
+    "start": "nodemon server/index.js",
+    "seed": "node server/seed.js"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "faker": "^5.1.0",
+    "mongoose": "^5.10.6",
+    "nodemon": "^2.0.4"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "jest": "^26.4.2",
+    "webpack": "^4.44.2"
   }
 }
