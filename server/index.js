@@ -4,8 +4,11 @@ const port = 3000
 const mongoose = require('mongoose')
 const db = require('../database/index.js')
 const bodyParser = require('body-parser')
+const path = require('path');
 
 app.use(bodyParser.json())
+
+app.use('/', express.static(path.join(__dirname, '../client/dist')))
 
 app.post('/api/addresses', (req, res) => {
   db.save(req.body, (err, data) => {
@@ -17,8 +20,9 @@ app.post('/api/addresses', (req, res) => {
   });
 });
 
-app.get('/api/addresses', (req, res) => {
-  db.retrieve((err, data) => {
+app.get('/api/addresses/:id', (req, res) => {
+  const { id } = req.params;
+  db.retrieve(id, (err, data) => {
     if (err) {
       res.status(400).send(err);
     } else {

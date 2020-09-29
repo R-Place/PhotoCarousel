@@ -10,8 +10,15 @@ const conn = mongoose.connection;
 // });
 
 let addressRepo = mongoose.Schema({
+  id: Number,
   homeAddress: String,
-  description: String
+  description: String,
+  price: Number,
+  estMortgage: Number,
+  image: String,
+  interior1: String,
+  interior2: String,
+  new: Boolean
 });
 
 let Address = mongoose.model('Address', addressRepo);
@@ -23,26 +30,26 @@ const save = (data, callback) => {
     } else {
       callback(null, result);
     }
-  })
-}
+  });
+};
 
-const retrieve = (callback) => {
-  Address.find()
+const retrieve = (data, callback) => {
+  Address.find({ id : data })
   .exec((err, result) => {
     if (err) {
       callback(err);
     } else {
-      callback(result);
+      callback(null, result);
     }
-  })
-}
+  });
+};
 
 const remove = () => {
   conn.dropDatabase();
-}
+};
 
 module.exports = {
   save: save,
   retrieve: retrieve,
   remove: remove
-}
+};
