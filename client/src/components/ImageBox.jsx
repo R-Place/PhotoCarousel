@@ -1,5 +1,6 @@
 import React from 'react';
 import DetailsBanner from './DetailsBanner.jsx';
+import PhotoCounter from './PhotoCounter.jsx';
 
 const ImageBox = (props) => {
   console.log(props.listing.id);
@@ -22,6 +23,7 @@ const ImageBox = (props) => {
             </div>
           </div>
         </div>
+        <PhotoCounter />
       </div>
     </div>
   )

@@ -11,7 +11,8 @@
     "test": "jest",
     "start": "nodemon server/index.js",
     "seed": "node server/seed.js",
-    "react-dev": "webpack -d --watch"
+    "react-dev": "webpack -d --watch",
+    "lint": "./node_modules/.bin/eslint"
   },
   "dependencies": {
     "aws-sdk": "^2.761.0",
@@ -30,6 +31,7 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",

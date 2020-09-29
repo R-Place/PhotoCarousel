@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusTags } from './Styled.jsx';
+import { StatusTags, SaveButton, HeartButton } from './Styled.jsx';
 import NewBanner from './NewBanner.jsx';
 
 const DetailsBanner = (props) => {
@@ -17,6 +17,14 @@ const DetailsBanner = (props) => {
         <span>
           <NewBanner new={props.new} />
         </span>
+      </div>
+      <div className="savebutton">
+        <SaveButton>
+          <HeartButton>
+          <i class="far fa-heart"></i>
+          </HeartButton>
+          Save
+        </SaveButton>
       </div>
     </div>
   )
