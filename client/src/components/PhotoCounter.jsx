@@ -1,12 +1,15 @@
 import React from 'react';
 import { DetailFooter } from './Styled.jsx';
+//import {Image2} from 'styled-icons';
 
-const PhotoCounter = () => {
+const PhotoCounter = ({count}) => {
 
   return (
     <DetailFooter>
-      5
+      {/* <Image2 /> */}
+      {count}
     </DetailFooter>
+
   )
 }
 

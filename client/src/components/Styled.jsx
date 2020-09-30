@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StatusTags = styled.span `
+const StatusTags = styled.span`
   color: rgb(0, 178, 91);
   font-size: 12px;
   background-color: white;
@@ -12,11 +12,12 @@ const StatusTags = styled.span `
   margin-right: 4px;
 `;
 
-const NewTag = styled(StatusTags) `
+const NewTag = styled(StatusTags)`
   color: rgb(5, 34, 134);
-`
-const SaveButton = styled.button `
+`;
+const SaveButton = styled.button`
   text-align: center;
+  outline: none;
   position: relative;
   left: 760px;
   background-color: white;
@@ -39,9 +40,9 @@ const SaveButton = styled.button `
     background-color: rgba(85, 85, 87, 0.678);
   }
 
-`
+`;
 
-const HeartButton = styled.i `
+const HeartButtonEmpty = styled.i`
 text-align: center;
 font-size: 24px;
 font-weight: bold;
@@ -50,21 +51,61 @@ color: rgb(0, 120, 130);
 &:active {
   color: rgb(255, 255, 255);
 }
-`
+`;
 
-const DetailFooter = styled.button `
-background-color: rgba(59, 65, 68, 0.8);
-padding: 0px 8px;
-border-radius: 4px;
-color: white;
-border: none;
-font-weight: bold;
-`
+const HeartButtonFilled = styled(HeartButtonEmpty)`
+  color: rgb(225, 99, 79);
+
+`;
+
+const DetailFooter = styled.button`
+  text-align: center;
+  position: relative;
+  left: 960px;
+  top: -25px;
+  background-color: rgba(59, 65, 68, 0.8);
+  padding: 0px 8px;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  font-weight: bold;
+`;
+
+const Modal = styled.div`
+  position:fixed;
+  background: white;
+  width: 80%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+`;
+
+const ModalBackground = styled.section`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+`;
+
+const ModalShow = styled(Modal)`
+  display: block
+`;
+
+const ModalHide = styled(Modal)`
+  display: none
+`;
 
 export {
   StatusTags,
   NewTag,
   SaveButton,
-  HeartButton,
-  DetailFooter
-}
+  HeartButtonEmpty,
+  DetailFooter,
+  HeartButtonFilled,
+  ModalShow,
+  ModalHide,
+  ModalBackground,
+};

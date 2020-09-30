@@ -1,6 +1,7 @@
 import React from 'react';
-import { StatusTags, SaveButton, HeartButton } from './Styled.jsx';
+import { StatusTags, SaveButton, HeartButtonEmpty } from './Styled.jsx';
 import NewBanner from './NewBanner.jsx';
+import HeartButton from './HeartButton.jsx';
 
 const DetailsBanner = (props) => {
 
@@ -15,14 +16,15 @@ const DetailsBanner = (props) => {
           </StatusTags>
         </span>
         <span>
-          <NewBanner new={props.new} />
+          <NewBanner new={props.listing.new} />
         </span>
       </div>
       <div className="savebutton">
         <SaveButton>
-          <HeartButton>
+          {/* <HeartButtonEmpty>
           <i class="far fa-heart"></i>
-          </HeartButton>
+          </HeartButtonEmpty> */}
+          <HeartButton saved={props.listing.saved} saveListing={props.saveListing} />
           Save
         </SaveButton>
       </div>

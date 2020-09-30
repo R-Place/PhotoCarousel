@@ -12,13 +12,13 @@ const conn = mongoose.connection;
 let addressRepo = mongoose.Schema({
   id: Number,
   homeAddress: String,
+  cityState: String,
   description: String,
   price: Number,
   estMortgage: Number,
-  image: String,
-  interior1: String,
-  interior2: String,
-  new: Boolean
+  image: [String],
+  new: Boolean,
+  saved: Boolean
 });
 
 let Address = mongoose.model('Address', addressRepo);

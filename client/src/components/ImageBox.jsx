@@ -3,27 +3,27 @@ import DetailsBanner from './DetailsBanner.jsx';
 import PhotoCounter from './PhotoCounter.jsx';
 
 const ImageBox = (props) => {
-  console.log(props.listing.id);
+  console.log(props);
 
   return (
 
     <div className="hero-container">
       <div className="tile-container">
-        <DetailsBanner new={props.listing.new}/>
-        <div className="tile-background">
+        <DetailsBanner listing={props.listing} saveListing={props.saveListing} />
+        <div className="tile-background zoom">
           <div className="box">
-            <div className="column mainimage zoom">
-              <img className="primary" src={props.listing.image} />
+            <div className="column mainimage">
+              <img className="primary" src={props.listing.image[0]} onClick={props.toggleModal} />
             </div>
-            <div className="column secondaryimage zoom">
-              <img className="secondary" src={props.listing.interior1} />
+            <div className="column secondaryimage">
+              <img className="secondary" src={props.listing.image[1]} onClick={props.toggleModal} />
             </div>
-            <div className="tertiaryimage zoom">
-              <img className="tertiary" src={props.listing.interior2} />
+            <div className="tertiaryimage">
+              <img className="tertiary" src={props.listing.image[2]} onClick={props.toggleModal} />
             </div>
           </div>
         </div>
-        <PhotoCounter />
+        <PhotoCounter count={props.listing.image.length}/>
       </div>
     </div>
   )
