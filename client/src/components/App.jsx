@@ -3,6 +3,7 @@ import axios from 'axios';
 import ImageBox from './ImageBox.jsx';
 import DetailsBanner from './DetailsBanner.jsx';
 import HomeDetails from './HomeDetails.jsx';
+import Header from './Header.jsx';
 import Modal from './Modal.jsx';
 
 class App extends React.Component {
@@ -15,6 +16,7 @@ class App extends React.Component {
     this.getListingInfo = this.getListingInfo.bind(this);
     this.saveListing = this.saveListing.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
+    this.disableToggleModal = this.disableToggleModal.bind(this);
   }
 
   componentDidMount() {
@@ -41,11 +43,19 @@ class App extends React.Component {
     })
   }
 
+  disableToggleModal() {
+    this.setState({
+      show: true
+    })
+  }
+
   render() {
     return (
       <div>
-        <img className="header" src='https://test-awuradjoa-quansah.s3-us-west-1.amazonaws.com/Screen+Shot+2020-09-25+at+10.26.19+PM.png'></img>
-        <Modal show={this.state.show} toggleModal={this.toggleModal} />
+        <Modal toggleModal={this.toggleModal} show={this.state.show} onClose={this.toggleModal} listing={this.state.listing}
+        >
+        </Modal>
+        < Header />
         {
           this.state.listing.map((listing) => (
             <ImageBox listing={listing} saveListing={this.saveListing} toggleModal={this.toggleModal} />

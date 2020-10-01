@@ -19,7 +19,7 @@ const SaveButton = styled.button`
   text-align: center;
   outline: none;
   position: relative;
-  left: 760px;
+  left: 750px;
   background-color: white;
   padding: 8px 16px;
   color: rgb(59, 65, 68);
@@ -40,6 +40,10 @@ const SaveButton = styled.button`
     background-color: rgba(85, 85, 87, 0.678);
   }
 
+`;
+
+const ModalSaveButton = styled(SaveButton)`
+left: 1000px;
 `;
 
 const HeartButtonEmpty = styled.i`
@@ -98,6 +102,12 @@ const ModalHide = styled(Modal)`
   display: none
 `;
 
+const Arrow = styled.i`
+  color: rgb(255,255,255);
+  font-size: 50px;
+`
+
+
 export {
   StatusTags,
   NewTag,
@@ -108,4 +118,6 @@ export {
   ModalShow,
   ModalHide,
   ModalBackground,
+  ModalSaveButton,
+  Arrow,
 };

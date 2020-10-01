@@ -21,9 +21,6 @@ const DetailsBanner = (props) => {
       </div>
       <div className="savebutton">
         <SaveButton>
-          {/* <HeartButtonEmpty>
-          <i class="far fa-heart"></i>
-          </HeartButtonEmpty> */}
           <HeartButton saved={props.listing.saved} saveListing={props.saveListing} />
           Save
         </SaveButton>

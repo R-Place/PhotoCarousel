@@ -7,6 +7,58 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal */
+
+.backdropStyle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  padding: 50px;
+  z-index: 1;
+}
+
+.modalStyle {
+  background-color: black;
+  border-radius: 5px;
+  max-width: 1300px;
+  min-height: 550px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.headerStyle {
+  background-color: white;
+  position: relative;
+  top: -25px;
+  padding: 8px;
+  border-radius: 8px 8px 0px 0px;
+  max-width: 1300px;
+  width: 100%;
+  border-bottom-color: silver;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+}
+
+.footerStyle {
+  position: absolute;
+  bottom: 40px;
+  right: 0px;
+  width: 100%;
+  max-width: 1300px;
+  border-top-color: silver;
+  border-top-width: 1px;
+  border-top-style: solid;
 }
 
 /*Grid for Photo Box Element*/
@@ -95,9 +147,6 @@ body {
   transition: scale(1.5);
 }
 
-/* .details {
-  position: relative;
-} */
 
 /* Details Banner */
 
@@ -111,5 +160,39 @@ body {
   box-sizing: border-box;
 
 }
+
+/* Modal */
+
+.custom-modal-style {
+  width: 897px;
+  height: 802px;
+}
+
+.primaryImage {
+  position: relative;
+  top: -20px;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
+  display: flex;
+
+}
+
+.backArrow {
+  z-index: 1;
+}
+
+.test {
+  position: absolute;
+  left: 50px;
+}
+
 
 
