@@ -13,8 +13,8 @@ const ImageBox = (props) => {
     <div className="hero-container">
       <div className="tile-container">
         <DetailsBanner listing={props.listing} saveListing={props.saveListing} />
-        <div className="tile-background zoom">
-          <div className="box">
+        <div className="tile-background">
+          <div className="box img-hover-zoom">
             <div className="column mainimage">
               <img className="primary" src={props.listing.image[0]} onClick={props.toggleModal}  />
             </div>
@@ -26,7 +26,7 @@ const ImageBox = (props) => {
             </div>
           </div>
         </div>
-        <PhotoCounter count={props.listing.image.length}/>
+        <PhotoCounter count={props.listing.image.length} toggleModal={props.toggleModal} />
       </div>
     </div>
   )

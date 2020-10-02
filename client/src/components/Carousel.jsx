@@ -2,6 +2,8 @@ import React from 'react';
 import LeftArrow from './LeftArrow.jsx';
 import RightArrow from './RightArrow.jsx';
 import Photo from './Photo.jsx';
+import CarouselPhotoCounter from './CarouselPhotoCounter.jsx';
+import CarouselHomeDetails from './CarouselHomeDetails.jsx';
 
 class Carousel extends React.Component {
 
@@ -49,14 +51,17 @@ class Carousel extends React.Component {
 
   render() {
     return(
-      <div className="carousel">
-        <div className="carouselComponents">
-          {/* <LeftArrow goToPrevSlide={this.goToPrevSlide} /> */}
-          <div>
-            <Photo activeIndex={this.state.activeIndex} images={this.props.images} />
-          </div>
-          <RightArrow goToNextSlide={this.goToNextSlide} />
+      <div className="carouselContainer">
+        <LeftArrow goToPrevSlide={this.goToPrevSlide} />
+        <div className="mainphoto">
+          <Photo activeIndex={this.state.activeIndex} images={this.props.images} />
         </div>
+        <RightArrow goToNextSlide={this.goToNextSlide} />
+        <div className="staticscheduler">
+          <img className="staticschedulerphoto"src="https://test-awuradjoa-quansah.s3-us-west-1.amazonaws.com/Screen+Shot+2020-10-01+at+7.36.38+PM.png"></img>
+        </div>
+        <CarouselPhotoCounter activeIndex={this.state.activeIndex} imageCount={this.state.arrLength} />
+        <CarouselHomeDetails price={this.props.price} homeAddress={this.props.homeAddress} />
       </div>
     )
   }

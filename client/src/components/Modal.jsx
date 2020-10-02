@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import HeartButton from './HeartButton.jsx';
 import { SaveButton, ModalSaveButton } from './Styled.jsx';
 import Carousel from './Carousel.jsx';
+import LeftArrow from './LeftArrow.jsx';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -26,17 +27,19 @@ class Modal extends React.Component {
     return (
       <div className="backdropStyle">
         <div className="modalStyle">
-          <div className="headerStyle">
-            <ModalSaveButton>
-              <HeartButton />
+          <div className="modalGrid">
+            <div className="headerStyle">
+              <div className="closebutton" onClick={(e) => { this.onClose(e) }}> X </div>
+              <ModalSaveButton>
+                <HeartButton />
               Save
-            </ModalSaveButton>
-          </div>
-          <div className="bodyStyle">
-            <Carousel images={this.props.listing[0].image} />
-          </div>
-          <div className="footerStyle">
-            <button className="test" onClick={(e) => { this.onClose(e) }}> Close</button>
+              </ModalSaveButton>
+            </div>
+            <div className="bodyStyle">
+              <Carousel images={this.props.listing[0].image} price={this.props.listing[0].price} homeAddress={this.props.listing[0].homeAddress}/>
+            </div>
+            <div className="footerStyle">
+            </div>
           </div>
         </div>
       </div>

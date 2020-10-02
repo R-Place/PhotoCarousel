@@ -8,10 +8,13 @@ class LeftArrow extends React.Component {
     super(props);
   }
 
+  goToPrevSlide(e){
+    this.props.goToPrevSlide && this.props.goToPrevSlide(e)
+  }
+
   render() {
-    console.log(this.props.goToPrevSlide);
     return (
-      <div className='backArrow' onClick={this.props.goToPrevSlide}>
+      <div className='backArrow' onClick={(e) => {this.goToPrevSlide(e)}}>
         <Arrow>
           <i className="fas fa-chevron-circle-left" aria-hidden='true'></i>
         </Arrow>

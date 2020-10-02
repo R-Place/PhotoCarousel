@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getListingInfo(8);
+    this.getListingInfo(24);
   }
 
   getListingInfo(id) {
@@ -38,9 +38,10 @@ class App extends React.Component {
   }
 
   toggleModal() {
+    console.log('i ran toggleModal');
     this.setState({
       show: !this.state.show
-    })
+    }, () => {console.log(this.state)})
   }
 
   disableToggleModal() {

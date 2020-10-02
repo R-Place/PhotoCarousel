@@ -11,7 +11,7 @@ class Photo extends React.Component {
   render() {
     console.log(this.props.activeIndex)
     return(
-      <section>
+      <section className="photosection">
         {
           this.state.images.map((image, index) => (
             <div className={

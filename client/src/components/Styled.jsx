@@ -10,18 +10,20 @@ const StatusTags = styled.span`
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-right: 4px;
+  z-index: 1;
 `;
 
 const NewTag = styled(StatusTags)`
   color: rgb(5, 34, 134);
+  z-index: 1;
 `;
 const SaveButton = styled.button`
   text-align: center;
   outline: none;
   position: relative;
-  left: 750px;
   background-color: white;
-  padding: 8px 16px;
+  left: 755px;
+  padding: 4px 16px;
   color: rgb(59, 65, 68);
   border-color: rgb(205, 209, 212);
   border-radius: 8px;
@@ -43,7 +45,12 @@ const SaveButton = styled.button`
 `;
 
 const ModalSaveButton = styled(SaveButton)`
-left: 1000px;
+  grid-area: 1 / 10 / 1 / 11 ;
+  width: 110px;
+  height: 45px;
+  align-self: center;
+  left: 0px;
+  text-align: center;
 `;
 
 const HeartButtonEmpty = styled.i`
@@ -59,14 +66,15 @@ color: rgb(0, 120, 130);
 
 const HeartButtonFilled = styled(HeartButtonEmpty)`
   color: rgb(225, 99, 79);
+  text-align: center;
 
 `;
 
 const DetailFooter = styled.button`
   text-align: center;
   position: relative;
-  left: 960px;
-  top: -25px;
+  left: 930px;
+  top: -30px;
   background-color: rgba(59, 65, 68, 0.8);
   padding: 0px 8px;
   border-radius: 4px;
@@ -103,10 +111,33 @@ const ModalHide = styled(Modal)`
 `;
 
 const Arrow = styled.i`
-  color: rgb(255,255,255);
+  color: rgb(59, 65, 68);
   font-size: 50px;
-`
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
+const HomeAddress = styled.span`
+  color: rgb(59, 65, 68);
+  font-weight: bold;
+  font-size: 28px;
+`;
+
+const SecondLineHomeAddress = styled.span`
+  display: block;
+  font-size: 16px;
+  color: rgb(59, 65, 68);
+`;
+
+const HomeInterior = styled.span`
+  margin: 6px;
+`;
+
+const HomeInteriorIcons = styled.i`
+  margin-right: 6px;
+  color: rgb(134, 144, 153);
+`;
 
 export {
   StatusTags,
@@ -120,4 +151,8 @@ export {
   ModalBackground,
   ModalSaveButton,
   Arrow,
+  HomeAddress,
+  SecondLineHomeAddress,
+  HomeInterior,
+  HomeInteriorIcons,
 };
