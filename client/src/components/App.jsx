@@ -5,6 +5,7 @@ import DetailsBanner from './DetailsBanner.jsx';
 import HomeDetails from './HomeDetails.jsx';
 import Header from './Header.jsx';
 import Modal from './Modal.jsx';
+import Breadcrumbs from './Breadcrumbs.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -57,6 +58,7 @@ class App extends React.Component {
         >
         </Modal>
         < Header />
+        <Breadcrumbs />
         {
           this.state.listing.map((listing) => (
             <ImageBox listing={listing} saveListing={this.saveListing} toggleModal={this.toggleModal} />

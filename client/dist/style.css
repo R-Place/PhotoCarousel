@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: TruliaSans, system, -apple-system, Roboto, "Segoe UI Bold", Arial, sans-serif;
   justify-content: center;
   align-items: center;
 }
@@ -25,6 +25,14 @@ body {
   backdrop-filter: blur(20px);
   padding: 50px;
   z-index: 2;
+  transform: scale(1);
+  transition-timing-function: ease-in-out;
+}
+
+.fadein {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 3s linear;
 }
 
 .modalGrid {

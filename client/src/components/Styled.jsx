@@ -139,6 +139,23 @@ const HomeInteriorIcons = styled.i`
   color: rgb(134, 144, 153);
 `;
 
+const SearchBreadcrumb = styled.span`
+  color: rgb(0, 120, 130);
+  font-size: 14px;
+  font-weight: bold;
+`;
+
+const BreadcrumbGreyElements = styled.span`
+  color: rgb(134,144,153);
+  size: 10px;
+  margin: 2px;
+`;
+
+const BreadcrumbGreenElements = styled(BreadcrumbGreyElements)`
+  color: rgb(0, 120, 130);
+`;
+
+
 export {
   StatusTags,
   NewTag,
@@ -155,4 +172,7 @@ export {
   SecondLineHomeAddress,
   HomeInterior,
   HomeInteriorIcons,
+  SearchBreadcrumb,
+  BreadcrumbGreyElements,
+  BreadcrumbGreenElements,
 };

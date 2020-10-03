@@ -25,7 +25,7 @@ class Modal extends React.Component {
       return null;
     }
     return (
-      <div className="backdropStyle">
+      <div className="backdropStyle fadein">
         <div className="modalStyle">
           <div className="modalGrid">
             <div className="headerStyle">
