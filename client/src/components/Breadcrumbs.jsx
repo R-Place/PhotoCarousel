@@ -1,10 +1,10 @@
 import React from 'react';
-import { SearchBreadcrumb, BreadcrumbGreyElements, BreadcrumbGreenElements } from './Styled.jsx';
+import { BreadCrumbs, SearchBreadcrumb, BreadcrumbGreyElements, BreadcrumbGreenElements } from './Styled.jsx';
 
 const Breadcrumbs = (props) => (
-  <div>
+  <BreadCrumbs>
     <SearchBreadcrumb>
-      <span> <i class="fas fa-arrow-left"></i> Back to Search</span>
+      <span> <i className="fas fa-arrow-left"></i> Back to Search</span>
     </SearchBreadcrumb>
     <BreadcrumbGreyElements>
       <span> For Sale </span>
@@ -31,9 +31,9 @@ const Breadcrumbs = (props) => (
       <span> > </span>
     </BreadcrumbGreyElements>
     <BreadcrumbGreyElements>
-      <span> placeholder </span>
+      <span> {props.listing.homeAddress} </span>
     </BreadcrumbGreyElements>
-  </div>
+  </BreadCrumbs>
 )
 
 export default Breadcrumbs;

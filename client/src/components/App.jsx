@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getListingInfo(24);
+    this.getListingInfo(16);
   }
 
   getListingInfo(id) {
@@ -58,7 +58,11 @@ class App extends React.Component {
         >
         </Modal>
         < Header />
-        <Breadcrumbs />
+        {
+          this.state.listing.map((listing) => (
+            <Breadcrumbs listing={listing} />
+          ))
+        }
         {
           this.state.listing.map((listing) => (
             <ImageBox listing={listing} saveListing={this.saveListing} toggleModal={this.toggleModal} />

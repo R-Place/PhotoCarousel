@@ -1,9 +1,9 @@
 import React from 'react';
-import { HomeAddress, SecondLineHomeAddress, HomeInterior, HomeInteriorIcons } from './Styled.jsx';
+import { HomeDetailsContainer, HomeAddressContainer, HomeAddress, SecondLineHomeAddress, HomeInterior, HomeInteriorIcons, PreQualifiedButton, HomeInteriorDetails, HomePrice, PreQualifiedButtonContainer } from './Styled.jsx';
 
 const HomeDetails = (props) => (
-  <div className="homedetailscontainer">
-    <div className="homeaddress">
+  <HomeDetailsContainer>
+    <HomeAddressContainer>
       <HomeAddress>
         <span className="firstlinehomeaddress">
           {props.listing.homeAddress}
@@ -14,12 +14,12 @@ const HomeDetails = (props) => (
           {props.listing.cityState}
         </span>
       </SecondLineHomeAddress>
-    </div>
-    <div className="homeinteriordetails">
+    </HomeAddressContainer>
+    <HomeInteriorDetails>
       <HomeInterior>
         <span className="homeinterior">
           <HomeInteriorIcons>
-            <i class="fas fa-bed"></i>
+            <i className="fas fa-bed"></i>
           </HomeInteriorIcons>
         3 beds
         </span>
@@ -40,8 +40,8 @@ const HomeDetails = (props) => (
           1,325 sqft
         </span>
       </HomeInterior>
-    </div>
-    <div className="homeprice">
+    </HomeInteriorDetails>
+    <HomePrice>
       <HomeAddress>
         <span>
           {props.listing.price.toLocaleString('us-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 })}
@@ -52,8 +52,13 @@ const HomeDetails = (props) => (
           {`Est. Mortgage ${props.listing.estMortgage.toLocaleString('us-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 })}/mo`}
         </span>
       </SecondLineHomeAddress>
-    </div>
-  </div>
+    </HomePrice>
+    <PreQualifiedButtonContainer>
+      <PreQualifiedButton>
+        Get Pre-Qualified
+      </PreQualifiedButton>
+    </PreQualifiedButtonContainer>
+  </HomeDetailsContainer>
 );
 
 export default HomeDetails;

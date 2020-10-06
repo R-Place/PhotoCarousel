@@ -4,6 +4,7 @@ import RightArrow from './RightArrow.jsx';
 import Photo from './Photo.jsx';
 import CarouselPhotoCounter from './CarouselPhotoCounter.jsx';
 import CarouselHomeDetails from './CarouselHomeDetails.jsx';
+import { CarouselContainer, MainPhoto, StaticSchedulerFormat, StaticSchedulerPhoto } from './Styled.jsx';
 
 class Carousel extends React.Component {
 
@@ -32,7 +33,6 @@ class Carousel extends React.Component {
   }
 
   goToNextSlide() {
-    console.log('i ran goToNextSlide');
     let index = this.state.activeIndex;
     let length = this.state.arrLength;
 
@@ -46,23 +46,24 @@ class Carousel extends React.Component {
 
     this.setState({
       activeIndex: index
-    }, () => (console.log(this.state)))
+    })
   }
 
   render() {
     return(
-      <div className="carouselContainer">
+      <CarouselContainer>
         <LeftArrow goToPrevSlide={this.goToPrevSlide} />
-        <div className="mainphoto">
+        <MainPhoto>
           <Photo activeIndex={this.state.activeIndex} images={this.props.images} />
-        </div>
+        </MainPhoto>
         <RightArrow goToNextSlide={this.goToNextSlide} />
-        <div className="staticscheduler">
-          <img className="staticschedulerphoto"src="https://test-awuradjoa-quansah.s3-us-west-1.amazonaws.com/Screen+Shot+2020-10-01+at+7.36.38+PM.png"></img>
-        </div>
+        <StaticSchedulerFormat>
+          <StaticSchedulerPhoto src="https://test-awuradjoa-quansah.s3-us-west-1.amazonaws.com/Screen+Shot+2020-10-01+at+7.36.38+PM.png">
+          </StaticSchedulerPhoto>
+        </StaticSchedulerFormat>
         <CarouselPhotoCounter activeIndex={this.state.activeIndex} imageCount={this.state.arrLength} />
         <CarouselHomeDetails price={this.props.price} homeAddress={this.props.homeAddress} />
-      </div>
+      </CarouselContainer>
     )
   }
 };

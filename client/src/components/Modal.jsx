@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HeartButton from './HeartButton.jsx';
-import { SaveButton, ModalSaveButton } from './Styled.jsx';
+import { SaveButton, ModalSaveButton, ModalStyle, ModalGrid, HeaderStyle, CloseButton, BodyStyle, FooterStyle, BackDropStyle } from './Styled.jsx';
 import Carousel from './Carousel.jsx';
 import LeftArrow from './LeftArrow.jsx';
 
@@ -25,24 +25,26 @@ class Modal extends React.Component {
       return null;
     }
     return (
-      <div className="backdropStyle fadein">
-        <div className="modalStyle">
-          <div className="modalGrid">
-            <div className="headerStyle">
-              <div className="closebutton" onClick={(e) => { this.onClose(e) }}> X </div>
+      <BackDropStyle>
+        <ModalStyle>
+          <ModalGrid>
+            <HeaderStyle>
+              <CloseButton onClick={(e) => { this.onClose(e) }}>
+                X
+              </CloseButton>
               <ModalSaveButton>
                 <HeartButton />
               Save
               </ModalSaveButton>
-            </div>
-            <div className="bodyStyle">
+            </HeaderStyle>
+            <BodyStyle>
               <Carousel images={this.props.listing[0].image} price={this.props.listing[0].price} homeAddress={this.props.listing[0].homeAddress}/>
-            </div>
-            <div className="footerStyle">
-            </div>
-          </div>
-        </div>
-      </div>
+            </BodyStyle>
+            <FooterStyle>
+            </FooterStyle>
+          </ModalGrid>
+        </ModalStyle>
+      </BackDropStyle>
     )
   }
 }
