@@ -11,7 +11,7 @@
     "test": "jest",
     "start": "nodemon server/index.js",
     "seed": "node server/seed.js",
-    "react-dev": "webpack -d --watch",
+    "build": "webpack -d --watch",
     "lint": "./node_modules/.bin/eslint"
   },
   "dependencies": {
