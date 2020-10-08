@@ -12,6 +12,7 @@ let addressRepo = mongoose.Schema({
   id: Number,
   homeAddress: String,
   cityState: String,
+  zipCode: Number,
   description: String,
   price: Number,
   estMortgage: Number,
@@ -43,6 +44,16 @@ const retrieve = (data, callback) => {
     });
 };
 
+const update = (id, data, callback) => {
+  Address.findByIdAndUpdate(id, data, (err, result) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, result);
+    }
+  });
+}
+
 const remove = () => {
   conn.dropDatabase();
 };
@@ -51,4 +62,5 @@ module.exports = {
   save,
   retrieve,
   remove,
+  update,
 };

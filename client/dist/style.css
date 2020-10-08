@@ -89,7 +89,7 @@
   position: absolute;
   margin-top: 8px;
   background-color: white;
-  min-width: 170px;
+  min-width: 150px;
   border-radius: 5px;
   border-color: rgb(232,233,234);
   border-width: 1px;
@@ -101,12 +101,14 @@
 
 .dropdown-content a {
   color: rgb(59, 65, 68);
-  padding: 6px 40px 6px 14px;
+  padding: 6px 36px 6px 14px;
   text-decoration: none;
   display: block;
   letter-spacing: -0.1;
   text-align: left;
+  white-space: nowrap;
 }
+
 
 
 

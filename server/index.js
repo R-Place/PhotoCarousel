@@ -31,6 +31,18 @@ app.get('/api/addresses/:id', (req, res) => {
   });
 });
 
+app.put('/api/addresses/:id', (req,res) => {
+  const { id } = req.params;
+  const { saved } = req.body;
+  db.update(id, {"saved": saved}, (err, data) => {
+    if (err) {
+      res.status(400).send();
+    } else {
+      res.status(200).send();
+    }
+  });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })

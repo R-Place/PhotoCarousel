@@ -38,14 +38,22 @@ const RentDropDownMenu = (props) => {
     <div className="dropdown-content">
       <StyledLink href="#">
         San Francisco
-        </StyledLink>
-      <a href="#">All Rentals</a>
-      <a href="#">Apartments For Rent</a>
-      <a href="#">Houses For Rent</a>
-      <a href="#">See Newest Listings</a>
-      <div className="newestlistings">
-        <a href="#">Post A Rental Listing</a>
-      </div>
+      </StyledLink>
+      <DropDownContentLinks href="#">
+        All Rentals
+      </DropDownContentLinks>
+      <DropDownContentLinks href="#">
+        Apartments For Rent
+      </DropDownContentLinks>
+      <DropDownContentLinks href="#">
+        Houses For Rent
+      </DropDownContentLinks>
+      <NewestListings href="#">
+        See Newest Listings
+      </NewestListings>
+      <NewestListings href="#">
+        Post A Rental Listing
+      </NewestListings>
     </div>
   )
 }
@@ -60,24 +68,43 @@ const MortgageDropDownMenu = (props) => {
     <div className="dropdown-content">
       <StyledLink href="#">
         San Francisco
-        </StyledLink>
-      <a href="#">Mortgage Overview</a>
-      <a href="#">Get Pre-Qualified</a>
-      <a href="#">Mortgage Rates</a>
-      <a href="#">Refinance Rates</a>
-      <a href="#">Mortgage Calculator</a>
-      <a href="#">Affordability Calculator</a>
-      <a href="#">Rent vs Buy Calculator</a>
-      <div className="newestlistings">
-        <a href="#">Refinance Calculator</a>
-      </div>
+      </StyledLink>
+      <DropDownContentLinks href="#">
+        Mortgage Overview
+      </DropDownContentLinks>
+      <DropDownContentLinks href="#">
+        Get Pre-Qualified
+      </DropDownContentLinks>
+      <DropDownContentLinks href="#">
+        Mortgage Rates
+      </DropDownContentLinks>
+      <DropDownContentLinks href="#">
+        Refinance Rates
+      </DropDownContentLinks>
+      <NewestListings href="#">
+        Mortgage Calculator
+      </NewestListings>
+      <DropDownContentLinks href="#">
+        Affordability Calculator
+      </DropDownContentLinks>
+      <DropDownContentLinks href="#">
+        Rent vs Buy Calculator
+      </DropDownContentLinks>
+      <DropDownContentLinks href="#">
+        Refinance Calculator
+      </DropDownContentLinks>
     </div>
 
   )
+}
+
+const ProfileDropDownMenu = () => {
+
 }
 
 export{
   BuyDropDownMenu,
   RentDropDownMenu,
   MortgageDropDownMenu,
+  ProfileDropDownMenu,
 }

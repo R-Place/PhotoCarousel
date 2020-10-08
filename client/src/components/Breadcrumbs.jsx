@@ -25,7 +25,7 @@ const Breadcrumbs = (props) => (
       <span> > </span>
     </BreadcrumbGreyElements>
     <BreadcrumbGreenElements>
-      <span> 94116 </span>
+      <span> {props.listing.zipCode} </span>
     </BreadcrumbGreenElements>
     <BreadcrumbGreyElements>
       <span> > </span>

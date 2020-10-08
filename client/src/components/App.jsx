@@ -37,7 +37,9 @@ class App extends React.Component {
     this.setState({
       listing: copyOfListing
     });
-
+    // axios.put(`/api/addresses/${id}`)
+    // .then(this.getListingInfo(id))
+    // .catch(err => this.setState({err}));
   }
 
   toggleModal() {

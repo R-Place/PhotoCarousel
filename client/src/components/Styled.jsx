@@ -156,9 +156,11 @@ const HomeInterior = styled.span`
   margin: 6px;
 `;
 
-const HomeInteriorIcons = styled.i`
-  margin-right: 6px;
-  color: rgb(134, 144, 153);
+const HomeInteriorIcons = styled.img`
+  height: 20px;
+  padding-right: 4px;
+  position: relative;
+  top: -2px;
 `;
 
 const BreadCrumbs = styled.div`
@@ -560,7 +562,7 @@ const NewestListings = styled.a`
   border-top-width: 1px;
   border-top-style: solid;
   text-align: center;
-  white-space:nowrap;
+  white-space: nowrap;
   padding: 12px 0px;
   &:hover {
     color: rgb(59, 65, 68);
