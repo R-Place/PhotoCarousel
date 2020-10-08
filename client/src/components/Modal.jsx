@@ -15,25 +15,20 @@ class Modal extends React.Component {
     this.props.onClose && this.props.onClose(e)
   }
 
-  disableOnClick(e) {
-    console.log('i ran disable onClick')
-    this.props.disableOnClick && this.props.disableOnClick(e);
-  }
-
   render() {
     if (!this.props.show) {
       return null;
     }
     return (
-      <BackDropStyle>
-        <ModalStyle>
+      <BackDropStyle onClick={(e) => { this.onClose(e) }}>
+        <ModalStyle onClick={(e) => {e.stopPropagation()}}>
           <ModalGrid>
             <HeaderStyle>
               <CloseButton onClick={(e) => { this.onClose(e) }}>
                 X
               </CloseButton>
               <ModalSaveButton>
-                <HeartButton />
+                <HeartButton saved={this.props.listing[0].saved} saveListing={this.props.saveListing}/>
               Save
               </ModalSaveButton>
             </HeaderStyle>

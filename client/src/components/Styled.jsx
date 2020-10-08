@@ -9,15 +9,19 @@ object-fit: contain;
 `;
 
 const StaticHeader = styled.div`
-  position: static;
+  position: fixed;
+  background-color: white;
   padding: 10px;
+  width: 100%;
+  top: 0px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: rgb(232, 233, 234);
+  z-index: 2;
 `;
 
 const SearchBar = styled.input`
-  padding-right: 300px;
+  padding-right: 200px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 16px;
@@ -25,10 +29,13 @@ const SearchBar = styled.input`
   border: 1px solid rgb(245, 246, 247);
   border-radius: 8px;
   background-color: rgb(245, 246, 247);
+  box-sizing: border-box;
 `;
 
 const SearchBarContainer = styled.div`
   margin-left: 15px;
+  margin-right: -40px;
+  box-sizing: border-box;
   display: inline;
 `;
 
@@ -57,7 +64,7 @@ const SaveButton = styled.button`
   outline: none;
   position: relative;
   background-color: white;
-  left: 755px;
+  left: 795px;
   padding: 2px 16px;
   color: rgb(59, 65, 68);
   border-color: rgb(205, 209, 212);
@@ -85,8 +92,9 @@ const ModalSaveButton = styled(SaveButton)`
   height: 40px;
   align-self: center;
   position: relative;
-  left: -20px;
+  left: -40px;
   text-align: center;
+  z-index: 1;
 `;
 
 const HeartButtonEmpty = styled.i`
@@ -124,33 +132,6 @@ const DetailFooter = styled.button`
   }
 `;
 
-const Modal = styled.div`
-  position:fixed;
-  background: white;
-  width: 80%;
-  height: auto;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-`;
-
-const ModalBackground = styled.section`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width:100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-`;
-
-const ModalShow = styled(Modal)`
-  display: block
-`;
-
-const ModalHide = styled(Modal)`
-  display: none
-`;
-
 const Arrow = styled.i`
   color: rgb(59, 65, 68);
   font-size: 50px;
@@ -184,15 +165,15 @@ const BreadCrumbs = styled.div`
   text-align: center;
   vertical-align: center;
   position: relative;
-  top: -0px;
-  left: -180px;
+  left: -15.5%;
   position: relative;
-  margin: 0px 0px 5px 0px;
+  margin: 6px 0px 8px 0px;
+  font-size: 14px;
+  letter-spacing: -0.1px;
 `;
 
 const SearchBreadcrumb = styled.span`
   color: rgb(0, 120, 130);
-  font-size: 14px;
   font-weight: bold;
   margin-right: 30px;
 `;
@@ -312,12 +293,14 @@ const HeroContainer = styled.div`
   display: flex;
   padding: 0 4px;
   align-items: center;
+  height: 100%;
 `;
 
 const TileContainer = styled.div`
   align-items: center;
   margin: auto;
   width: 992px;
+  height: 100%;
   border-radius: 8px;
   position: relative;
 `;
@@ -326,6 +309,7 @@ const TileBackground = styled.div`
   margin: auto;
   border-radius: 8px;
   overflow: hidden;
+  height: 100%;
 `;
 
 const MainImage = styled.div`
@@ -402,16 +386,21 @@ const CloseButton = styled.div`
   grid-area: 1 / 10 / 1 / 11 ;
   text-align: right;
   align-self: center;
-  margin: 0px 10px;
-  font-size: 30px;
+  margin: 0px 15px;
+  font-size: 24px;
+  position: relative;
+  left: -10px;
   color: rgb(59, 65, 68);
+  &:hover {
+    color: rgb(0,120,130);
+    cursor: pointer;
+  }
 `;
 
 const BodyStyle = styled.div`
   grid-area: 1 / 1 / 6 / 4;
   width: 100%;
   height: 100%;
-  min-height: 550px;
   margin: auto;
 `;
 
@@ -482,9 +471,116 @@ const BackDropStyle = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(20px);
   padding: 50px;
-  z-index: 2;
+  z-index: 3;
   transform: scale(1);
   transition-timing-function: ease-in-out;
+`;
+
+const BuyRentMortgage = styled.span`
+  box-sizing: border-box;
+  padding: 10px 15px;
+  margin: 0px 4px;
+  color: rgb(59, 65, 68);
+  font-weight: bold;
+  white-space: nowrap;
+  &:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(0,120,130);
+    padding: 8px 15px;
+  }
+`;
+
+const StyledLink = styled.a`
+  font-weight: bold;
+  &:hover {
+    color: rgb(59, 65, 68);
+    text-decoration: none;
+    cursor: auto;
+  }
+`;
+
+const DropDownMenu = styled.div`
+  display: inline-block;
+  position: relative;
+`;
+
+const ProfileInfo = styled.div`
+  display: inline-block;
+  position: relative;
+  left: 14%;
+`;
+
+const ListIcon = styled.i`
+  color: rgb(0, 120, 130);
+  margin-left: 20px;
+  font-size: 18px;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const BodyFormat = styled.div`
+  margin-top: 70px;
+`;
+
+const WebPageFormat = styled.div`
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+`;
+
+const SearchButton = styled.div`
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  right: 0px;
+  left: -3%;
+  top: 0px;
+  height: 100%;
+  cursor: pointer;
+  background-color: rgb(217, 60, 35);
+  padding: 9px 14px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: background-color 0.15s ease 0s;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const SearchIcon = styled.i`
+  color: white;
+`;
+
+const NewestListings = styled.a`
+  border-top: silver;
+  border-top-width: 1px;
+  border-top-style: solid;
+  text-align: center;
+  white-space:nowrap;
+  padding: 12px 0px;
+  &:hover {
+    color: rgb(59, 65, 68);
+    text-decoration: none;
+    background-color: #ddd;
+  }
+`;
+
+const DropDownContentLinks = styled.a`
+  color: rgb(59, 65, 68);
+  padding: 6px 40px 6px 14px;
+  text-decoration: none;
+  display: block;
+  letter-spacing: -0.1;
+  text-align: left;
+  &:hover {
+    color: rgb(59, 65, 68);
+    text-decoration: none;
+    background-color: #ddd;
+  }
 `;
 export {
   SearchBar,
@@ -498,9 +594,6 @@ export {
   HeartButtonEmpty,
   DetailFooter,
   HeartButtonFilled,
-  ModalShow,
-  ModalHide,
-  ModalBackground,
   ModalSaveButton,
   Arrow,
   HomeAddress,
@@ -546,4 +639,15 @@ export {
   StaticSchedulerFormat,
   StaticSchedulerPhoto,
   BackDropStyle,
+  BuyRentMortgage,
+  StyledLink,
+  DropDownMenu,
+  ProfileInfo,
+  ListIcon,
+  BodyFormat,
+  WebPageFormat,
+  SearchButton,
+  SearchIcon,
+  NewestListings,
+  DropDownContentLinks,
 };

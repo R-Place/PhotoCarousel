@@ -10,7 +10,6 @@ class Photo extends React.Component {
   }
 
   render() {
-    console.log(this.props.activeIndex)
     return(
       <PhotoSection>
         {

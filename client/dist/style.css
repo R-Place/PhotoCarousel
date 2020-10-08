@@ -1,10 +1,11 @@
 /*Static Header */
 
-body {
+/* body {
   font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   justify-content: center;
   align-items: center;
-}
+  min-height: 100%;
+} */
 
 /* Modal */
 
@@ -76,6 +77,37 @@ body {
   padding: 0px 4px;
   font-size: 14px;
 }
+
+/*DropDown Menus*/
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  margin-top: 8px;
+  background-color: white;
+  min-width: 170px;
+  border-radius: 5px;
+  border-color: rgb(232,233,234);
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 4px 10px 10px 1px rgba(59, 65, 68, 0.3);
+  z-index: 1;
+  font-size: 15px;
+}
+
+.dropdown-content a {
+  color: rgb(59, 65, 68);
+  padding: 6px 40px 6px 14px;
+  text-decoration: none;
+  display: block;
+  letter-spacing: -0.1;
+  text-align: left;
+}
+
 
 
 
