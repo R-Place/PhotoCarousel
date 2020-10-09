@@ -62,10 +62,10 @@ const NewTag = styled(StatusTags)`
 const SaveButton = styled.button`
   text-align: center;
   outline: none;
-  position: relative;
+  position: absolute;
   background-color: white;
-  left: 795px;
   padding: 2px 16px;
+  white-space: nowrap;
   color: rgb(59, 65, 68);
   border-color: rgb(205, 209, 212);
   border-radius: 8px;
@@ -279,7 +279,8 @@ const HomeInteriorDetails = styled.div`
 `;
 
 const SaveButtonFormat = styled.div`
-  position: relative;
+  position: absolute;
+  left: 880px;
 `;
 
 const HomePrice = styled.div`

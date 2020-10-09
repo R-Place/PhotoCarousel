@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getListingInfo(6);
+    this.getListingInfo(10);
   }
 
   getListingInfo(id) {

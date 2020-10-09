@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+//localhost:27017
+// 172.17.0.2
 mongoose.connect('mongodb://localhost:27017/addresses', {useNewUrlParser: true, useUnifiedTopology: true });
 
 const conn = mongoose.connection;
