@@ -5,6 +5,7 @@ import Photo from './Photo.jsx';
 import CarouselPhotoCounter from './CarouselPhotoCounter.jsx';
 import CarouselHomeDetails from './CarouselHomeDetails.jsx';
 import { CarouselContainer, MainPhoto, StaticSchedulerFormat, StaticSchedulerPhoto } from './Styled.jsx';
+import KeyboardEventHandler from 'react-keyboard-event-handler';
 
 class Carousel extends React.Component {
 
@@ -16,9 +17,11 @@ class Carousel extends React.Component {
     };
     this.goToPrevSlide = this.goToPrevSlide.bind(this);
     this.goToNextSlide = this.goToNextSlide.bind(this);
+    // this.keyPressLeft = this.keyPressLeft.bind(this);
   }
 
   goToPrevSlide() {
+    console.log('it worked!')
     let index = this.state.activeIndex;
     let length = this.state.arrLength;
 
@@ -49,9 +52,25 @@ class Carousel extends React.Component {
     })
   }
 
+  // keyPressLeft() {
+  //   console.log('i ran!')
+  //   if (e.charCode === '37') {
+  //     // this.goToPrevSlide();
+  //     console.log('You pressed the left key!')
+  //   };
+  // }
+
   render() {
     return(
       <CarouselContainer>
+        <KeyboardEventHandler
+          handleKeys={['left']}
+          onKeyEvent={(key, e) => this.goToPrevSlide()}
+        />
+        <KeyboardEventHandler
+          handleKeys={['right']}
+          onKeyEvent={(key, e) => this.goToNextSlide()}
+        />
         <LeftArrow goToPrevSlide={this.goToPrevSlide} />
         <MainPhoto>
           <Photo activeIndex={this.state.activeIndex} images={this.props.images} />

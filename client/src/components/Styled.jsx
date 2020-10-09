@@ -61,7 +61,7 @@ const NewTag = styled(StatusTags)`
 `;
 const SaveButton = styled.button`
   text-align: center;
-  outline: none;
+  outline: 0;
   position: absolute;
   background-color: white;
   padding: 2px 16px;
@@ -81,9 +81,15 @@ const SaveButton = styled.button`
   }
   &:active {
     color: rgb(255, 255, 255);
-    background-color: rgba(85, 85, 87, 0.678);
+    background-color: rgb(134, 144, 153);
+    outline: none;
+    border-color: transparent;
+    transition: top 0.1s ease 0s, box-shadow 0.1s ease 0s, border-color 0.1s ease 0s, background-color 0.1s ease 0s, color 0.1s ease 0s;
   }
-
+  &:focus {
+    border-color: rgb(134, 144, 153);
+    outline: none;
+  }
 `;
 
 const ModalSaveButton = styled(SaveButton)`
@@ -125,10 +131,16 @@ const DetailFooter = styled.button`
   color: white;
   border: none;
   font-weight: bold;
-  outline:none;
+  outline: none;
   &:hover {
     background-color: rgb(170, 170, 170);
     cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
   }
 `;
 
@@ -551,6 +563,7 @@ const SearchButton = styled.div`
   transition: background-color 0.15s ease 0s;
   &:hover {
     cursor: pointer;
+    background-color: rgb(156, 17, 20);
   }
 `;
 

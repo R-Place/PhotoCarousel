@@ -3,7 +3,7 @@ const faker = require('faker');
 const imageLinks = require('./imageLinks.js');
 
 const data = [];
-const limit = 25;
+const limit = 100;
 
 for (let i = 0; i < limit; i++) {
   const num = i + 1;
@@ -19,7 +19,7 @@ for (let i = 0; i < limit; i++) {
   const randomPrice = Math.floor(Math.random() * (max - min + 1) + min);
   const estimatedMortgage = Math.ceil((randomPrice * 1.4) / 360);
   const images = [];
-  images.push(imageLinks.imageLinks[i]);
+  images.push(imageLinks.imageLinks[Math.floor(Math.random() * (24 - 0 + 1) + 0)]);
   let numOfInteriorImages = Math.floor(Math.random() * (18 - 10 + 1) + 10);
   while (numOfInteriorImages > 0) {
     let randomIndex = Math.floor(Math.random() * (17 - 0 + 1) + 0);
