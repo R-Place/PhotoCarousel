@@ -22,7 +22,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getListingInfo(10);
+    let param = Number(window.location.search.slice(1));
+    this.getListingInfo(param);
   }
 
   getListingInfo(id) {
@@ -32,6 +33,7 @@ class App extends React.Component {
   }
 
   saveListing() {
+    console.log('i ran!!!!!!')
     let copyOfListing = this.state.listing;
     copyOfListing[0].saved = !copyOfListing[0].saved;
     this.setState({
@@ -58,8 +60,6 @@ class App extends React.Component {
         <Modal show={this.state.show} onClose={this.toggleModal} listing={this.state.listing} saveListing={this.saveListing}>
         </Modal>
         < Header />
-        <BodyFormat>
-
         {
           this.state.listing.map((listing) => (
             <Breadcrumbs listing={listing} />
@@ -75,7 +75,6 @@ class App extends React.Component {
             <HomeDetails listing={listing} />
           ))
         }
-        </BodyFormat>
       </WebPageFormat>
     )
   }

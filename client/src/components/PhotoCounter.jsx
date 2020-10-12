@@ -1,10 +1,10 @@
 import React from 'react';
-import { DetailFooter } from './Styled.jsx';
+import { DetailFooter, BoxPhotoIcon } from './Styled.jsx';
 
 const PhotoCounter = (props) => {
   return (
     <DetailFooter onClick={props.toggleModal}>
-      <i className='photoicon far fa-image'></i>
+      <BoxPhotoIcon className='far fa-image' />
       {props.count}
     </DetailFooter>
 

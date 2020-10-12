@@ -1,24 +1,8 @@
-/*Static Header */
 
-/* body {
-  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
-} */
+/* Carousel Photo Settings */
 
-/* Modal */
-
-.closebutton div:hover {
-  cursor: pointer;
-  color: rgb(0, 120, 130);
-}
-
-/* Carousel */
-
-.test {
-  position: absolute;
-  left: 50px;
+body {
+  overflow: hidden;
 }
 
 .inactive {
@@ -31,55 +15,8 @@
   width: 90%;
 }
 
-/*Grid for Photo Box Element*/
-
-.box {
-  display: grid;
-  margin: auto;
-  height: 425px;
-  width: 992px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50% 50% 50%;
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
-}
-
-/*Hover Setting for Photo Box */
-
-.box div:hover {
-  cursor: pointer;
-}
-
-/*Settings for Images in Photo Box */
-
-.mainimage {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-
-/* Zoom for Images in Photo Box*/
-.img-hover-zoom {
-  overflow: hidden;
-}
-
-.img-hover-zoom {
-  transition: transform .5s ease;
-}
-
-.img-hover-zoom:hover {
-  transform: scale(1.05);
-}
-
-/* Home Details Container */
-.photoicon {
-  padding: 0px 4px;
-  font-size: 14px;
-}
-
 /*DropDown Menus*/
-.dropdown {
+/* .dropdown {
   display: inline-block;
   position: relative;
 }
@@ -107,7 +44,9 @@
   letter-spacing: -0.1;
   text-align: left;
   white-space: nowrap;
-}
+} */
+
+
 
 
 

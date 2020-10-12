@@ -15,7 +15,7 @@ class RightArrow extends React.Component {
     return (
       <ForwardArrow onClick={(e) => {this.goToNextSlide(e)}}>
         <Arrow>
-          <i className="fas fa-chevron-circle-right" aria-hidden='true'></i>
+          <i className="fas fa-chevron-right" aria-hidden='true'> </i>
         </Arrow>
       </ForwardArrow>
     )

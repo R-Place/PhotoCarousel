@@ -1,13 +1,35 @@
 import styled from 'styled-components';
 
 const PhotoHeader = styled.img`
-width: 100%;
-height: 100px;
-margin: auto;
-text-align: center;
-object-fit: contain;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  object-fit: contain;
+  height: 100%;
 `;
 
+const BoxPhotoIcon = styled.i`
+  padding: 0px 4px;
+  font-size: 14px;
+`;
+
+const ImageBoxFormat = styled.div`
+  display: grid;
+  margin: auto;
+  height: 425px;
+  width: 992px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50% 50% 50%;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  overflow: hidden;
+  transition: transform .5s ease;
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+`;
 const StaticHeader = styled.div`
   position: fixed;
   background-color: white;
@@ -98,20 +120,23 @@ const ModalSaveButton = styled(SaveButton)`
   height: 40px;
   align-self: center;
   position: relative;
-  left: -40px;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
 `;
 
+const ModalSaveButtonContainer = styled.div`
+  grid-area: 1 / 9 / 1 / 11 ;
+  margin: auto;
+`;
 const HeartButtonEmpty = styled.i`
-text-align: center;
-font-size: 24px;
-font-weight: bold;
-padding-right: 10px;
-color: rgb(0, 120, 130);
-&:active {
-  color: rgb(255, 255, 255);
-}
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding-right: 10px;
+  color: rgb(0, 120, 130);
+  &:active {
+    color: rgb(255, 255, 255);
+  }
 `;
 
 const HeartButtonFilled = styled(HeartButtonEmpty)`
@@ -145,8 +170,13 @@ const DetailFooter = styled.button`
 `;
 
 const Arrow = styled.i`
-  color: rgb(59, 65, 68);
-  font-size: 50px;
+  background: #3B4145;
+  color: white;
+  padding: 1px;
+  color: white;
+  border-radius: 25px;
+  width: 48px;
+  height: 48px;
   &:hover {
     cursor: pointer;
   }
@@ -179,7 +209,7 @@ const BreadCrumbs = styled.div`
   text-align: center;
   vertical-align: center;
   position: relative;
-  left: -15.5%;
+  left: -220px;
   position: relative;
   margin: 6px 0px 8px 0px;
   font-size: 14px;
@@ -389,7 +419,7 @@ const ModalGrid = styled.div`
 const HeaderStyle = styled.div`
   grid-area: 1 / 1 / 2 / 4;
   background-color: white;
-  height: 45%;
+  height: 50px;
   width: 100%;
   border-radius: 5px 5px 0px 0px;
   display: grid;
@@ -406,6 +436,10 @@ const CloseButton = styled.div`
   position: relative;
   left: -10px;
   color: rgb(59, 65, 68);
+`;
+
+const Close = styled.span`
+  text-align: right;
   &:hover {
     color: rgb(0,120,130);
     cursor: pointer;
@@ -450,6 +484,8 @@ const ForwardArrow = styled.div`
   grid-area: 6 / 8 / 7 / 9;
   text-align: center;
   z-index: 1;
+  width: 48px;
+  height: 48px;
 `;
 
 const MainPhoto = styled.div`
@@ -482,9 +518,10 @@ const BackDropStyle = styled.div`
   top: 0;
   left: 0;
   bottom: 0;
+  overflow: hidden;
   right: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
   padding: 50px;
   z-index: 3;
   transform: scale(1);
@@ -534,10 +571,6 @@ const ListIcon = styled.i`
   &:hover {
     cursor: pointer;
   }
-`;
-
-const BodyFormat = styled.div`
-  margin-top: 70px;
 `;
 
 const WebPageFormat = styled.div`
@@ -600,6 +633,8 @@ const DropDownContentLinks = styled.a`
 `;
 export {
   SearchBar,
+  ImageBoxFormat,
+  BoxPhotoIcon,
   PhotoHeader,
   TruliaLogo,
   StaticHeader,
@@ -650,6 +685,7 @@ export {
   PhotoSection,
   PrimaryImage,
   PhotoIcon,
+  ModalSaveButtonContainer,
   ForwardArrow,
   MainPhoto,
   StaticSchedulerFormat,
@@ -660,10 +696,10 @@ export {
   DropDownMenu,
   ProfileInfo,
   ListIcon,
-  BodyFormat,
   WebPageFormat,
   SearchButton,
   SearchIcon,
   NewestListings,
   DropDownContentLinks,
+  Close,
 };
