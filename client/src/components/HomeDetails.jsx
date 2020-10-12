@@ -1,5 +1,5 @@
 import React from 'react';
-import { HomeDetailsContainer, HomeAddressContainer, HomeAddress, SecondLineHomeAddress, HomeInterior, HomeInteriorIcons, PreQualifiedButton, HomeInteriorDetails, HomePrice, PreQualifiedButtonContainer } from './Styled.jsx';
+import { HomeDetailsContainer, HomeAddressContainer, HomeAddress, SecondLineHomeAddress, HomeInterior, HomeInteriorIcons, PreQualifiedButton, HomeInteriorDetails, HomePrice, PreQualifiedButtonContainer, StaticBookerContainer, StaticBooker } from './Styled.jsx';
 
 const HomeDetails = (props) => (
   <HomeDetailsContainer>
@@ -55,6 +55,10 @@ const HomeDetails = (props) => (
         Get Pre-Qualified
       </PreQualifiedButton>
     </PreQualifiedButtonContainer>
+    <StaticBookerContainer>
+      <StaticBooker src="https://test-awuradjoa-quansah.s3-us-west-1.amazonaws.com/Screen+Shot+2020-10-11+at+10.29.04+PM.png">
+      </StaticBooker>
+    </StaticBookerContainer>
   </HomeDetailsContainer>
 );
 

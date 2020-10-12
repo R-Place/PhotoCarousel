@@ -10,9 +10,7 @@ const DetailsBanner = (props) => {
         <div className="tags">
           <span>
             <StatusTags>
-              <span className="for-sale-tag">
-                For Sale
-          </span>
+              For Sale
             </StatusTags>
           </span>
           <span>

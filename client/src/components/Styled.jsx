@@ -75,6 +75,10 @@ const StatusTags = styled.span`
   letter-spacing: 0.5px;
   margin-right: 4px;
   z-index: 1;
+  ${ImageBoxFormat}:hover & {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 `;
 
 const NewTag = styled(StatusTags)`
@@ -83,6 +87,7 @@ const NewTag = styled(StatusTags)`
 `;
 const SaveButton = styled.button`
   text-align: center;
+  vertical-align: middle;
   outline: 0;
   position: absolute;
   background-color: white;
@@ -115,7 +120,6 @@ const SaveButton = styled.button`
 `;
 
 const ModalSaveButton = styled(SaveButton)`
-  grid-area: 1 / 10 / 1 / 11 ;
   width: 110px;
   height: 40px;
   align-self: center;
@@ -125,8 +129,10 @@ const ModalSaveButton = styled(SaveButton)`
 `;
 
 const ModalSaveButtonContainer = styled.div`
-  grid-area: 1 / 9 / 1 / 11 ;
+  grid-area: 1 / 10 / 1 / 11 ;
   margin: auto;
+  position: relative;
+  left: -40px;
 `;
 const HeartButtonEmpty = styled.i`
   text-align: center;
@@ -172,13 +178,17 @@ const DetailFooter = styled.button`
 const Arrow = styled.i`
   background: #3B4145;
   color: white;
-  padding: 1px;
+  padding: 15px 20px;
   color: white;
-  border-radius: 25px;
+  border-radius: 50%;
   width: 48px;
   height: 48px;
   &:hover {
     cursor: pointer;
+    background-color: rgb(134, 144, 153);
+  }
+  &:active {
+    background-color: rgb(134, 144, 153);
   }
 `;
 
@@ -251,6 +261,8 @@ const PreQualifiedButton = styled.button`
   width: auto;
   padding: 8px 16px;
   box-shadow: none;
+  position: relative;
+  top: 70px;
   &:hover {
     color: rgb(0, 120, 130);
     background-color: rgb(255, 255, 255);
@@ -276,15 +288,18 @@ const CarouselHomeDetailsFormat = styled.div`
   font-size: 14px;
   position: relative;
   top: 10px;
+  white-space: nowrap;
 `;
 
 const CarouselPhotoCounterFormat = styled.div`
   color: white;
-  grid-area: 10 / 1 / 11 / 2;
+  grid-area: 10 / 1 / 11 / 3;
   margin: 20px 20px;
   font-size: 14px;
   position: relative;
   top: 10px;
+  white-space: nowrap;
+
 `;
 
 const DetailsBannerFormat = styled.div`
@@ -314,10 +329,11 @@ const HomeAddressContainer = styled.div`
 `;
 
 const HomeInteriorDetails = styled.div`
-  grid-area: 2 / 1 / 3 / 4;
-  position: relative;
+  grid-area: 1 / 1 / 3 / 4;
   left: -5px;
   margin: 15px 0px;
+  position: relative;
+  top: 70px;
 `;
 
 const SaveButtonFormat = styled.div`
@@ -331,7 +347,17 @@ const HomePrice = styled.div`
 `;
 
 const PreQualifiedButtonContainer = styled.div`
-  grid-area: 2 / 4 / 3 / 6;
+  grid-area: 1 / 4 / 3 / 6;
+`;
+
+const StaticBookerContainer = styled.div`
+  grid-area: 1 / 6 / 5 / 8;
+`;
+
+const StaticBooker = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 `;
 
 const HeroContainer = styled.div`
@@ -396,6 +422,10 @@ const BackArrow = styled.div`
   z-index: 1;
   grid-area: 6 / 1 / 7 / 2 ;
   text-align: center;
+  justify-self: center;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
 `;
 
 const ModalStyle = styled.div`
@@ -403,9 +433,13 @@ const ModalStyle = styled.div`
   border-radius: 5px;
   width: 100%;
   height: 100%;
+  min-width: 750px;
+  min-height: 615px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  transition-timing-function: ease;
+  transition: 2s;
 `;
 
 const ModalGrid = styled.div`
@@ -434,7 +468,6 @@ const CloseButton = styled.div`
   margin: 0px 15px;
   font-size: 24px;
   position: relative;
-  left: -10px;
   color: rgb(59, 65, 68);
 `;
 
@@ -482,7 +515,8 @@ const PhotoIcon = styled.i`
 
 const ForwardArrow = styled.div`
   grid-area: 6 / 8 / 7 / 9;
-  text-align: center;
+  align-self: center;
+  justify-self: center;
   z-index: 1;
   width: 48px;
   height: 48px;
@@ -525,7 +559,8 @@ const BackDropStyle = styled.div`
   padding: 50px;
   z-index: 3;
   transform: scale(1);
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-out;
+  transition: 2s;
 `;
 
 const BuyRentMortgage = styled.span`
@@ -702,4 +737,6 @@ export {
   NewestListings,
   DropDownContentLinks,
   Close,
+  StaticBookerContainer,
+  StaticBooker,
 };

@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let param = Number(window.location.search.slice(1));
+    let param = Number(window.location.search.slice(4));
     this.getListingInfo(param);
   }
 

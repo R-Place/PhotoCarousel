@@ -1,10 +1,6 @@
 
 /* Carousel Photo Settings */
 
-body {
-  overflow: hidden;
-}
-
 .inactive {
   display: none;
 }
