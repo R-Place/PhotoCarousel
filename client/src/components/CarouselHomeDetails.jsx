@@ -1,12 +1,13 @@
 import React from 'react';
+import { CarouselHomeDetailsFormat } from './Styled.jsx';
 
 const CarouselHomeDetails = (props) => (
 
-  <div class="carouselhomedetails">
+  <CarouselHomeDetailsFormat>
     <span>
       {`${props.homeAddress} | ${props.price.toLocaleString('us-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 })} | 3 Beds 2 Baths `}
     </span>
-  </div>
+  </CarouselHomeDetailsFormat>
 )
 
 export default CarouselHomeDetails;

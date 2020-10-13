@@ -1,14 +1,14 @@
-const express = require('express')
-const app = express()
-const port = 3000
-const mongoose = require('mongoose')
-const db = require('../database/index.js')
-const bodyParser = require('body-parser')
+const express = require('express');
+const app = express();
+const port = 3001;
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const path = require('path');
+const db = require('../database/index.js');
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-app.use('/', express.static(path.join(__dirname, '../client/dist')))
+app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 app.post('/api/addresses', (req, res) => {
   db.save(req.body, (err, data) => {
@@ -31,6 +31,18 @@ app.get('/api/addresses/:id', (req, res) => {
   });
 });
 
+// app.put('/api/addresses/:id', (req,res) => {
+//   const { id } = req.params;
+//   const { saved } = req.body;
+//   db.update(id, {"saved": saved}, (err, data) => {
+//     if (err) {
+//       res.status(400).send();
+//     } else {
+//       res.status(200).send();
+//     }
+//   });
+// });
+
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+  console.log(`Example app listening at http://localhost:${port}`);
+});

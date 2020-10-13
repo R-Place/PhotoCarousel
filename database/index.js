@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
+//localhost:27017
+// 172.17.0.2
 mongoose.connect('mongodb://localhost:27017/addresses', {useNewUrlParser: true, useUnifiedTopology: true });
-
 
 const conn = mongoose.connection;
 // db.on('error', console.error.bind(console, 'connection error:'));
@@ -13,12 +14,13 @@ let addressRepo = mongoose.Schema({
   id: Number,
   homeAddress: String,
   cityState: String,
+  zipCode: Number,
   description: String,
   price: Number,
   estMortgage: Number,
   image: [String],
   new: Boolean,
-  saved: Boolean
+  saved: Boolean,
 });
 
 let Address = mongoose.model('Address', addressRepo);
@@ -34,22 +36,33 @@ const save = (data, callback) => {
 };
 
 const retrieve = (data, callback) => {
-  Address.find({ id : data })
-  .exec((err, result) => {
+  Address.find({ id: data })
+    .exec((err, result) => {
+      if (err) {
+        callback(err);
+      } else {
+        callback(null, result);
+      }
+    });
+};
+
+const update = (id, data, callback) => {
+  Address.findByIdAndUpdate(id, data, (err, result) => {
     if (err) {
       callback(err);
     } else {
       callback(null, result);
     }
   });
-};
+}
 
 const remove = () => {
   conn.dropDatabase();
 };
 
 module.exports = {
-  save: save,
-  retrieve: retrieve,
-  remove: remove
+  save,
+  retrieve,
+  remove,
+  update,
 };

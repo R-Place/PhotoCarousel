@@ -1,5 +1,5 @@
 import React from 'react';
-import { Arrow } from './Styled.jsx';
+import { ForwardArrow, Arrow } from './Styled.jsx';
 
 class RightArrow extends React.Component {
 
@@ -13,11 +13,11 @@ class RightArrow extends React.Component {
 
   render(){
     return (
-      <div className='forwardArrow' onClick={(e) => {this.goToNextSlide(e)}}>
+      <ForwardArrow onClick={(e) => {this.goToNextSlide(e)}}>
         <Arrow>
-          <i className="fas fa-chevron-circle-right" aria-hidden='true'></i>
+          <i className="fas fa-chevron-right" aria-hidden='true'> </i>
         </Arrow>
-      </div>
+      </ForwardArrow>
     )
   }
 

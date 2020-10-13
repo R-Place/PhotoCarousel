@@ -1,11 +1,12 @@
 import React from 'react';
+import { CarouselPhotoCounterFormat } from './Styled.jsx';
 
 const CarouselPhotoCounter = (props) => (
-  <div className="carouselphotocounter">
-    <span>
-      {`${props.activeIndex + 1}/${props.imageCount}`}
-    </span>
-  </div>
+  <CarouselPhotoCounterFormat>
+      <span>
+        {`${props.activeIndex + 1}/${props.imageCount}`}
+      </span>
+  </CarouselPhotoCounterFormat>
 )
 
 export default CarouselPhotoCounter;
