@@ -1,4 +1,4 @@
-//import styled from 'styled-components';
+import styled from 'styled-components';
 
 const PhotoHeader = styled.img`
   font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
