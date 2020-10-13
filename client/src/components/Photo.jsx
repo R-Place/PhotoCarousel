@@ -1,5 +1,5 @@
 import React from 'react';
-import { PhotoSection, PrimaryImage } from './Styled.jsx';
+import { PhotoSection, PrimaryImage, Active, Inactive } from './Styled.jsx';
 
 class Photo extends React.Component {
   constructor(props){
@@ -13,13 +13,13 @@ class Photo extends React.Component {
     return(
       <PhotoSection>
         {
-          this.state.images.map((image, index) => (
-            <div className={
-              index === this.props.activeIndex ? 'active' : 'inactive'} key={index}>
-                <PrimaryImage src={image}>
-                </PrimaryImage>
-              </div>
-          ))
+          this.state.images.map((image, index) => {
+            if (index === this.props.activeIndex) {
+              return <Active src={image} />
+            } else {
+              return <Inactive src={image} />
+            }
+          })
         }
       </PhotoSection>
     )

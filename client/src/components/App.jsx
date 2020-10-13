@@ -24,7 +24,7 @@ class App extends React.Component {
   componentDidMount() {
     console.log(window.location.href);
     let param = Number(window.location.search.slice(4));
-    param = (param || 4);
+    param = (param || 3);
     this.getListingInfo(param);
   }
 

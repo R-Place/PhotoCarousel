@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+//import styled from 'styled-components';
 
 const PhotoHeader = styled.img`
   font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
@@ -7,6 +7,26 @@ const PhotoHeader = styled.img`
   text-align: center;
   object-fit: contain;
   height: 100%;
+`;
+
+const Active = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: flex;
+  height: 100%;
+  width: 90%;
+`;
+
+const Inactive = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
 `;
 
 const BoxPhotoIcon = styled.i`
@@ -862,4 +882,6 @@ export {
   StaticPhotoMapContainer,
   StaticPhotoHomeDetailsContainer,
   StaticHeaderContainer,
+  Active,
+  Inactive
 };
