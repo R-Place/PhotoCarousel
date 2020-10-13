@@ -4,6 +4,7 @@ import HeartButton from './HeartButton.jsx';
 import { SaveButton, ModalSaveButton, ModalStyle, ModalGrid, HeaderStyle, CloseButton, BodyStyle, FooterStyle, BackDropStyle, Close, ModalSaveButtonContainer } from './Styled.jsx';
 import Carousel from './Carousel.jsx';
 import LeftArrow from './LeftArrow.jsx';
+import KeyboardEventHandler from 'react-keyboard-event-handler';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class Modal extends React.Component {
           <ModalGrid>
             <HeaderStyle>
               <CloseButton>
+                <KeyboardEventHandler handleKeys={['esc']} onKeyEvent={(key, e) => { this.onClose(e) }}/>
                 <Close onClick={(e) => { this.onClose(e) }}>
                   X
                 </Close>

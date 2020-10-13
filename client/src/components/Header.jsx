@@ -1,17 +1,19 @@
 import React from 'react';
-import { PhotoHeader, StaticHeader, TruliaLogo, SearchBar, SearchBarContainer, BuyRentMortgage, DropDownMenu, ProfileInfo, ListIcon, SearchButton, SearchIcon } from './Styled.jsx';
+import { PhotoHeader, StaticHeader, TruliaLogo, SearchBar, SearchBarContainer, BuyRentMortgage, DropDownMenu, ProfileInfo, ListIcon, SearchButton, SearchIcon,StaticHeaderContainer } from './Styled.jsx';
 import { BuyDropDownMenu, RentDropDownMenu, MortgageDropDownMenu } from './DropDownMenus.jsx';
 
 class Header extends React.Component {
-  
+
   constructor(props) {
     super(props);
   }
 
   render() {
     return(
+      <StaticHeaderContainer>
         <PhotoHeader src="https://test-awuradjoa-quansah.s3-us-west-1.amazonaws.com/Screen+Shot+2020-09-25+at+10.26.19+PM.png">
         </PhotoHeader>
+      </StaticHeaderContainer>
     )
   }
   // constructor(props) {

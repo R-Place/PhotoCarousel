@@ -21,7 +21,6 @@ class Carousel extends React.Component {
   }
 
   goToPrevSlide() {
-    console.log('it worked!')
     let index = this.state.activeIndex;
     let length = this.state.arrLength;
 
@@ -45,20 +44,10 @@ class Carousel extends React.Component {
       index++;
     }
 
-    console.log(index);
-
     this.setState({
       activeIndex: index
     })
   }
-
-  // keyPressLeft() {
-  //   console.log('i ran!')
-  //   if (e.charCode === '37') {
-  //     // this.goToPrevSlide();
-  //     console.log('You pressed the left key!')
-  //   };
-  // }
 
   render() {
     return(

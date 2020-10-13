@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const PhotoHeader = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   width: 100%;
   margin: auto;
   text-align: center;
@@ -9,11 +10,13 @@ const PhotoHeader = styled.img`
 `;
 
 const BoxPhotoIcon = styled.i`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   padding: 0px 4px;
-  font-size: 14px;
+  font-size: 16px;
 `;
 
 const ImageBoxFormat = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   display: grid;
   margin: auto;
   height: 425px;
@@ -31,6 +34,7 @@ const ImageBoxFormat = styled.div`
 
 `;
 const StaticHeader = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   position: fixed;
   background-color: white;
   padding: 10px;
@@ -43,6 +47,7 @@ const StaticHeader = styled.div`
 `;
 
 const SearchBar = styled.input`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   padding-right: 200px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -55,6 +60,7 @@ const SearchBar = styled.input`
 `;
 
 const SearchBarContainer = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   margin-left: 15px;
   margin-right: -40px;
   box-sizing: border-box;
@@ -62,9 +68,11 @@ const SearchBarContainer = styled.div`
 `;
 
 const TruliaLogo = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   object-fit: contain;
 `;
 const StatusTags = styled.span`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   color: rgb(0, 178, 91);
   font-size: 12px;
   background-color: white;
@@ -82,10 +90,12 @@ const StatusTags = styled.span`
 `;
 
 const NewTag = styled(StatusTags)`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   color: rgb(5, 34, 134);
   z-index: 1;
 `;
 const SaveButton = styled.button`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   text-align: center;
   vertical-align: middle;
   outline: 0;
@@ -120,6 +130,7 @@ const SaveButton = styled.button`
 `;
 
 const ModalSaveButton = styled(SaveButton)`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   width: 110px;
   height: 40px;
   align-self: center;
@@ -129,12 +140,14 @@ const ModalSaveButton = styled(SaveButton)`
 `;
 
 const ModalSaveButtonContainer = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-area: 1 / 10 / 1 / 11 ;
   margin: auto;
   position: relative;
   left: -40px;
 `;
 const HeartButtonEmpty = styled.i`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
@@ -146,12 +159,14 @@ const HeartButtonEmpty = styled.i`
 `;
 
 const HeartButtonFilled = styled(HeartButtonEmpty)`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   color: rgb(225, 99, 79);
   text-align: center;
 
 `;
 
 const DetailFooter = styled.button`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   text-align: center;
   position: relative;
   left: 930px;
@@ -176,6 +191,7 @@ const DetailFooter = styled.button`
 `;
 
 const Arrow = styled.i`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   background: #3B4145;
   color: white;
   padding: 15px 20px;
@@ -193,22 +209,26 @@ const Arrow = styled.i`
 `;
 
 const HomeAddress = styled.span`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   color: rgb(59, 65, 68);
   font-weight: bold;
   font-size: 28px;
 `;
 
 const SecondLineHomeAddress = styled.span`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   display: block;
   font-size: 16px;
   color: rgb(59, 65, 68);
 `;
 
 const HomeInterior = styled.span`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   margin: 6px;
 `;
 
 const HomeInteriorIcons = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   height: 20px;
   padding-right: 4px;
   position: relative;
@@ -216,6 +236,7 @@ const HomeInteriorIcons = styled.img`
 `;
 
 const BreadCrumbs = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   text-align: center;
   vertical-align: center;
   position: relative;
@@ -227,6 +248,7 @@ const BreadCrumbs = styled.div`
 `;
 
 const SearchBreadcrumb = styled.span`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   color: rgb(0, 120, 130);
   font-weight: bold;
   margin-right: 30px;
@@ -245,6 +267,7 @@ const BreadcrumbGreenElements = styled(BreadcrumbGreyElements)`
 `;
 
 const PreQualifiedButton = styled.button`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   margin: 10px 0px 16px;
   border-radius: 8px;
   border-width: 1px;
@@ -271,6 +294,7 @@ const PreQualifiedButton = styled.button`
 `;
 
 const CarouselContainer = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   display: grid;
   position: relative;
   grid-template-columns: repeat(10, 1fr);
@@ -282,6 +306,7 @@ const CarouselContainer = styled.div`
 `;
 
 const CarouselHomeDetailsFormat = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   color: white;
   grid-area: 10 / 3 / 11 / 7;
   margin: auto;
@@ -292,6 +317,7 @@ const CarouselHomeDetailsFormat = styled.div`
 `;
 
 const CarouselPhotoCounterFormat = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   color: white;
   grid-area: 10 / 1 / 11 / 3;
   margin: 20px 20px;
@@ -303,6 +329,7 @@ const CarouselPhotoCounterFormat = styled.div`
 `;
 
 const DetailsBannerFormat = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   position: absolute;
   display: flex;
   vertical-align: top;
@@ -314,6 +341,7 @@ const DetailsBannerFormat = styled.div`
 `;
 
 const HomeDetailsContainer = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -324,11 +352,13 @@ const HomeDetailsContainer = styled.div`
 `;
 
 const HomeAddressContainer = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-area: 1 / 1 / 2 / 4;
   position: relative;
 `;
 
 const HomeInteriorDetails = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-area: 1 / 1 / 3 / 4;
   left: -5px;
   margin: 15px 0px;
@@ -337,30 +367,43 @@ const HomeInteriorDetails = styled.div`
 `;
 
 const SaveButtonFormat = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   position: absolute;
   left: 880px;
 `;
 
 const HomePrice = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-area: 1 / 4 / 2 / 6;
   position: relative;
+  right: 60px;
 `;
 
 const PreQualifiedButtonContainer = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-area: 1 / 4 / 3 / 6;
+  position: relative;
+  right: 60px;
+  z-index: 1;
 `;
 
 const StaticBookerContainer = styled.div`
-  grid-area: 1 / 6 / 5 / 8;
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
+  grid-area: 1 / 6 / 2 / 8;
+  position: relative;
+  right: 22px;
 `;
 
 const StaticBooker = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 5px;
 `;
 
 const HeroContainer = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   display: flex;
   padding: 0 4px;
   align-items: center;
@@ -368,6 +411,7 @@ const HeroContainer = styled.div`
 `;
 
 const TileContainer = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   align-items: center;
   margin: auto;
   width: 992px;
@@ -377,6 +421,7 @@ const TileContainer = styled.div`
 `;
 
 const TileBackground = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   margin: auto;
   border-radius: 8px;
   overflow: hidden;
@@ -384,6 +429,7 @@ const TileBackground = styled.div`
 `;
 
 const MainImage = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -391,34 +437,40 @@ const MainImage = styled.div`
 `;
 
 const Primary = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   width: 100%;
   height: 100%;
   border-radius: 8px 0px 0px 8px;
 `;
 
 const SecondaryImage = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-column-start: 4;
   grid-column-end: 5;
 `;
 
 const Secondary = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   width: 100%;
   height: 100%;
   border-radius: 0px 8px 0px 0px;
 `;
 
 const TertiaryImage = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-column-start: 4;
   grid-column-end: 5;
 `;
 
 const Tertiary = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   width: 100%;
   height: 100%;
   border-radius: 0px 0px 8px 0px;
 `;
 
 const BackArrow = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   z-index: 1;
   grid-area: 6 / 1 / 7 / 2 ;
   text-align: center;
@@ -429,6 +481,7 @@ const BackArrow = styled.div`
 `;
 
 const ModalStyle = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   background-color: black;
   border-radius: 5px;
   width: 100%;
@@ -443,6 +496,7 @@ const ModalStyle = styled.div`
 `;
 
 const ModalGrid = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   display: grid;
   width: 100%;
   height: 100%;
@@ -451,6 +505,7 @@ const ModalGrid = styled.div`
 `;
 
 const HeaderStyle = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-area: 1 / 1 / 2 / 4;
   background-color: white;
   height: 50px;
@@ -461,6 +516,7 @@ const HeaderStyle = styled.div`
 `;
 
 const CloseButton = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   z-index: 2;
   grid-area: 1 / 10 / 1 / 11 ;
   text-align: right;
@@ -472,6 +528,7 @@ const CloseButton = styled.div`
 `;
 
 const Close = styled.span`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   text-align: right;
   &:hover {
     color: rgb(0,120,130);
@@ -480,6 +537,7 @@ const Close = styled.span`
 `;
 
 const BodyStyle = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-area: 1 / 1 / 6 / 4;
   width: 100%;
   height: 100%;
@@ -487,6 +545,7 @@ const BodyStyle = styled.div`
 `;
 
 const FooterStyle = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   position: absolute;
   bottom: 50px;
   right: 0px;
@@ -497,11 +556,13 @@ const FooterStyle = styled.div`
 `;
 
 const PhotoSection = styled.section`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   height: 100%;
   width: 100%;
 `;
 
 const PrimaryImage = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   position: relative;
   width: 100%;
   height: 100%;
@@ -509,11 +570,13 @@ const PrimaryImage = styled.img`
 `;
 
 const PhotoIcon = styled.i`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   padding: 0px 4px;
   font-size: 14px;
 `;
 
 const ForwardArrow = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-area: 6 / 8 / 7 / 9;
   align-self: center;
   justify-self: center;
@@ -523,6 +586,7 @@ const ForwardArrow = styled.div`
 `;
 
 const MainPhoto = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   grid-area: 2 / 2 / 10 / 9;
   position: relative;
   top: -4px;
@@ -534,6 +598,7 @@ const MainPhoto = styled.div`
 `;
 
 const StaticSchedulerFormat = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   height: 100%;
   grid-area: 2 / 9 / 11 / 11;
   z-index: 1;
@@ -541,6 +606,7 @@ const StaticSchedulerFormat = styled.div`
 `;
 
 const StaticSchedulerPhoto = styled.img`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   height: 100%;
   width: 100%;
   border-radius: 5px;
@@ -548,6 +614,7 @@ const StaticSchedulerPhoto = styled.img`
 `;
 
 const BackDropStyle = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -564,6 +631,7 @@ const BackDropStyle = styled.div`
 `;
 
 const BuyRentMortgage = styled.span`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   box-sizing: border-box;
   padding: 10px 15px;
   margin: 0px 4px;
@@ -580,6 +648,7 @@ const BuyRentMortgage = styled.span`
 `;
 
 const StyledLink = styled.a`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   font-weight: bold;
   &:hover {
     color: rgb(59, 65, 68);
@@ -589,17 +658,20 @@ const StyledLink = styled.a`
 `;
 
 const DropDownMenu = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   display: inline-block;
   position: relative;
 `;
 
 const ProfileInfo = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   display: inline-block;
   position: relative;
   left: 14%;
 `;
 
 const ListIcon = styled.i`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   color: rgb(0, 120, 130);
   margin-left: 20px;
   font-size: 18px;
@@ -609,12 +681,15 @@ const ListIcon = styled.i`
 `;
 
 const WebPageFormat = styled.div`
-  margin: 0px;
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
+  margin-top: 80px;
   height: 100%;
   width: 100%;
+
 `;
 
 const SearchButton = styled.div`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   position: relative;
   display: inline-block;
   justify-content: center;
@@ -636,10 +711,12 @@ const SearchButton = styled.div`
 `;
 
 const SearchIcon = styled.i`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   color: white;
 `;
 
 const NewestListings = styled.a`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   border-top: silver;
   border-top-width: 1px;
   border-top-style: solid;
@@ -654,6 +731,7 @@ const NewestListings = styled.a`
 `;
 
 const DropDownContentLinks = styled.a`
+  font-family: TruliaSans, Roboto, "Segoe UI Bold", Arial, sans-serif;
   color: rgb(59, 65, 68);
   padding: 6px 40px 6px 14px;
   text-decoration: none;
@@ -665,6 +743,44 @@ const DropDownContentLinks = styled.a`
     text-decoration: none;
     background-color: #ddd;
   }
+`;
+
+const StaticPhotoLocalInfo = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`;
+
+const StaticPhotoHomeDetails = styled.img`
+
+`;
+const StaticPhotoMapContainer = styled.div`
+  grid-area: 1 / 4 / 1 / 5;
+  position: relative;
+  left: 123px;
+`;
+const StaticPhotoMap = styled.img`
+`;
+
+const StaticPhotoLocalInfoContainer = styled.div`
+  position: relative;
+  grid-area: 1 / 1 / 3 / 6;
+  position: relative;
+  top: -48px;
+  right: 20px;
+`;
+
+const StaticPhotoHomeDetailsContainer = styled.div`
+  position: relative;
+  grid-area: 3 / 1 / 4 / 4;
+  right: 23px;
+  bottom: 195px;
+`;
+
+const StaticHeaderContainer = styled.div`
+  position: fixed;
+  top: 0px;
+  z-index: 2;
 `;
 export {
   SearchBar,
@@ -739,4 +855,11 @@ export {
   Close,
   StaticBookerContainer,
   StaticBooker,
+  StaticPhotoLocalInfo,
+  StaticPhotoHomeDetails,
+  StaticPhotoMap,
+  StaticPhotoLocalInfoContainer,
+  StaticPhotoMapContainer,
+  StaticPhotoHomeDetailsContainer,
+  StaticHeaderContainer,
 };
