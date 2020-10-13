@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "node server/index.js",
+    "start": "nodemon server/index.js",
     "seed": "node server/seed.js",
     "build": "webpack -d --watch",
     "lint": "./node_modules/.bin/eslint"
